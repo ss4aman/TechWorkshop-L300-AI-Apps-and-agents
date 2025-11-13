@@ -9,9 +9,9 @@ on:
   workflow_dispatch:
 
 env:
-  REGISTRY_NAME: your-acr-name  # Replace with your ACR name (without .azurecr.io)
-  IMAGE_NAME: zava-shopping-assistant
-  IMAGE_TAG: ${{ github.sha }}
+  REGISTRY_NAME: ${{ env.REGISTRY_NAME }}  # Replace with your ACR name (without .azurecr.io)
+  IMAGE_NAME: chat-app
+  IMAGE_TAG: latest
 
 jobs:
   build-and-push:
